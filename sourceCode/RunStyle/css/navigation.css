@@ -1,0 +1,24 @@
+.my-nav{
+    background-color: rgba(75,122,147,.95);
+    background-image: none;
+    border: none;
+}
+
+.my-title{
+    color:#fff!important;
+    text-shadow: none;
+}
+.navbar-nav > li > a{
+    font-weight:700;
+    color: #fff!important;
+    text-shadow: none;
+}
+
+.navbar-nav > li > a:hover{
+    color: #9d9d9d!important;
+}
+
+.navbar-nav > .active > a{
+    color: #9d9d9d!important;
+    background-color:transparent!important;
+}
