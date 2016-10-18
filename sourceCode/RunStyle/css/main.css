@@ -7,4 +7,32 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
     font-weight:300;
 }
 
+.first-part{
+    margin-top:150px;
+}
+
+.float-right{
+    float:right;
+}
+
+.float-left{
+    float:left;
+}
+
+.white-color{
+    color:#fff;
+}
+
+.blue-color{
+    color:#5299C0
+}
+
+.grey-color{
+    color:#485366;
+
+}
+
+.bar-hr{
+    color: rgba(200,200,200,.8);
+}
 

@@ -1,0 +1,84 @@
+.sport-part{
+    margin-top:60px;
+
+}
+
+.side-navigation{
+    background-color: #5299C0;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.header-part{
+    margin-top:15px;
+    text-align: center;
+}
+
+.side-navigation > ul > li > a{
+
+}
+
+.main-content{
+    border: 1px ;
+    box-shadow: 2px 2px 2px #888888;
+}
+
+/*运动分析模块*/
+
+.steps{
+    color:#5299C0;
+    font-size:40px;
+    font-weight: 700;
+
+}
+
+.sort-title{
+    color:#485366;
+    font-size:18px;
+    font-weight:500;
+    padding-left:30px;
+}
+
+.sort-data, .sort-data:hover{
+    text-decoration: none;
+    color:rgb(237,185,103);
+    font-size: 40px;
+    font-weight:700;
+    padding-left: 20px;
+}
+
+.detail-data{
+    margin-top:15px;
+    margin-left:10%;
+}
+
+.step-next-title{
+    color:#485366;
+    font-size:15px;
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+.sport-data{
+    color:rgb(237,185,103);
+    font-size:20px;
+    font-weight:600;
+    padding-right:5px;
+}
+
+.common{
+    padding-right:8%;
+}
+
+#sport-line{
+    min-width:310px;
+    height:400px;
+    margin:0 auto;
+}
+
+/*end 运动分析模块*/
+
+/*睡眠分析模块*/
+
+
+
+/*end 睡眠分析模块*/
