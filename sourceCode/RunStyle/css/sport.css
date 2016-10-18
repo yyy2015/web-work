@@ -22,6 +22,8 @@
     box-shadow: 2px 2px 2px #888888;
 }
 
+/*运动分析模块*/
+
 .steps{
     color:#5299C0;
     font-size:40px;
@@ -72,3 +74,11 @@
     height:400px;
     margin:0 auto;
 }
+
+/*end 运动分析模块*/
+
+/*睡眠分析模块*/
+
+
+
+/*end 睡眠分析模块*/
