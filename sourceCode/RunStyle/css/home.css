@@ -2,7 +2,7 @@
 .my-part1{
     background-color: #5299C0;
     width:100%;
-    height:600px;
+    height:650px;
     vertical-align: middle;
 }
 
@@ -32,11 +32,11 @@
 
 .btn-self{
     position:relative;
-    margin-top:40px;
+    margin-top:45px;
     background-color: rgba(237,185,103,.8);
     border: hidden;
     width:130px;
-    height:40px;
+    height:35px;
     vertical-align: middle;
 }
 
