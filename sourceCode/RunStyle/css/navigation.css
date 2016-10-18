@@ -23,3 +23,10 @@
     color: #9d9d9d!important;
     background-color:transparent!important;
 }
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: rgba(210,210,210,.1);
+}
+.navbar-inverse .navbar-toggle {
+    border-color: rgb(200,200,200);
+}
