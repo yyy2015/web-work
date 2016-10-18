@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c713821-aeb6-4ac9-a608-6a5b7fd89dad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/sport.css" afterPath="$PROJECT_DIR$/css/sport.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/friendManage.html" afterPath="$PROJECT_DIR$/html/friendManage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/healthInfo.html" afterPath="$PROJECT_DIR$/html/healthInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/sleepAnalysis.html" afterPath="$PROJECT_DIR$/html/sleepAnalysis.html" />
-    </list>
+    <list default="true" id="6c713821-aeb6-4ac9-a608-6a5b7fd89dad" name="Default" comment="" />
     <ignored path="RunStyle.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -171,8 +165,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="295" />
-    <option name="y" value="13" />
+    <option name="x" value="131" />
+    <option name="y" value="63" />
     <option name="width" value="1408" />
     <option name="height" value="1056" />
   </component>
@@ -699,10 +693,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37689000" />
+    <option name="totallyTimeSpent" value="37773000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="295" y="13" width="1408" height="1056" extended-state="0" />
+    <frame x="131" y="63" width="1408" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
