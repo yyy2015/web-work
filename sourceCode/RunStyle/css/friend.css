@@ -115,11 +115,11 @@
     border-color: #5299C0;
 }
 
-.btn-release{
+.btn-release,.btn-search{
     background-color: #5299C0;
     color:#fff;
 }
-.btn-release:hover,.btn-release：focus{
+.btn-release:hover,.btn-release：focus,.btn-search:hover,.btn-search:focus{
     outline:none;
     background-color: rgb(75,122,147);
 }
@@ -174,3 +174,50 @@
     background-color: rgb(150,150,150);
 }
 /*end 与我相关*/
+
+/*好友管理*/
+
+.search-part{
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+}
+
+.one-friend{
+    width:40%;
+    margin-left:5%;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom:1%;
+    box-shadow: 1px 1px 1px 1px #888888;
+}
+
+.honor-part{
+    margin-top:5px;
+}
+
+.honor-data{
+    display:inline-block;
+    color:rgb(237,185,103);
+}
+
+.btn-add{
+    margin-top:-80px;
+    margin-right:30px;
+    border:none;
+    background-color: #5299C0;
+    color:white;
+    width:100px;
+    height:35px;
+}
+
+.btn-add:hover{
+    border: none;
+    outline:none;
+    background-color: rgb(75,122,147);
+    color:white;
+}
+
+
+
+/*end 好友管理*/
