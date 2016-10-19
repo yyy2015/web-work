@@ -32,6 +32,10 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
 
 }
 
+.white-grey-color{
+    color:rgb(150,150,150);
+}
+
 .bar-hr{
     color: rgba(200,200,200,.8);
 }
