@@ -48,8 +48,10 @@
 
 .friend-mood-bar{
     width:80%;
-    padding-left:10%;
-    padding-right:10%;
+    margin-left:10%;
+    margin-right:10%;
+    padding-left:5%;
+    padding-right:6%;
     box-shadow: 2px 2px 2px 2px #888888;
 }
 
