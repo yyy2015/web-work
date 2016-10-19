@@ -40,4 +40,44 @@
     box-shadow: 1px 1px 1px #888888;
 }
 
+.friend-all-mood{
+    margin-top:5px;
+    box-shadow: 1px 1px 1px #888888;
+    /*background-color: rgb(240,240,240);*/
+}
+
+.friend-mood-bar{
+    width:80%;
+    padding-left:10%;
+    padding-right:10%;
+    box-shadow: 2px 2px 2px 2px #888888;
+}
+
+.mood-header{
+    padding-top:10px;
+}
+
+
+
+.user-header{
+    width:50px;
+}
+
+.user-name{
+    color:#485366;
+    font-weight:500;
+    font-size:20px;
+}
+
+.release-time{
+    color:rgb(150,150,150);
+    padding-top:10px;
+}
+
+.mood-text{
+    color:#485366;
+    font-weight:500;
+    font-size:14px;
+}
+
 /*end 好友动态*/
