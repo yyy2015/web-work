@@ -36,3 +36,29 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
     color: rgba(200,200,200,.8);
 }
 
+/*侧边导航*/
+.sport-part{
+    margin-top:60px;
+
+}
+
+.side-navigation{
+    background-color: #5299C0;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.header-part{
+    margin-top:15px;
+    text-align: center;
+}
+
+.side-navigation > ul > li > a{
+
+}
+
+.main-content{
+    border: 1px ;
+    box-shadow: 2px 2px 2px #888888;
+}
+
+

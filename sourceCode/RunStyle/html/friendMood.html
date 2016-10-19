@@ -11,7 +11,7 @@
     <!--<link href="../plugin/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">-->
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/navigation.css" rel="stylesheet">
-    <link href="../css/sport.css" rel="stylesheet">
+    <link href="../css/friend.css" rel="stylesheet">
 </head>
 <body>
 <!--fixed navbar-->
@@ -30,8 +30,8 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="index.html">首页</a></li>
-                <li class="active"><a href="sportAnalysis.html">运动</a></li>
-                <li><a href="friendMood.html">动态</a></li>
+                <li><a href="sportAnalysis.html">运动</a></li>
+                <li class="active"><a href="friendMood.html">动态</a></li>
                 <li><a href="activity.html">活动</a></li>
             </ul>
 
@@ -55,48 +55,29 @@
             </div>
 
             <ul class="nav nav-sidebar">
-                <li><a href="sportAnalysis.html" class="white-color">运动分析</a></li>
-                <li><a href="sleepAnalysis.html" class="white-color">睡眠分析</a></li>
-                <li><a href="healthInfo.html" class="white-color">身体管理</a></li>
+                <li><a href="friendMood.html" class="white-color">好友动态</a></li>
+                <li><a href="relatedWith.html" class="white-color">与我相关</a></li>
+                <li><a href="myMood.html" class="white-color">我的动态</a></li>
+                <li><a href="friendManage.html" class="white-color">好友管理</a></li>
             </ul>
         </div>
-        <div class="col-sm-9 col-md-10 main-content float-right">
-            <h2 class="grey-color">今日已运动</h2>
-            <hr class="bar-hr">
-            <div class="text-center">
-                <span class="steps">10400</span><span>步</span><span class="sort-title">日排名</span><a href="#sort-part" class="sort-data" title="点击查看排行榜">5</a>
+        <div class="col-sm-9 col-md-10 release-mood">
+            <div class="text-center release-part">
+                <textarea class="release-textarea" wrap="physical" >说点什么吧...</textarea>
+                <button class="btn btn-default btn-release">发布</button>
             </div>
-            <div class="detail-data text-center">
-                <span class="step-next-title">步行距离：</span><span class="sport-data">5</span><span class="common">公里</span>
-                <span class="step-next-title">跑步距离：</span><span class="sport-data">5</span><span class="common">公里</span>
-                <span class="step-next-title">运动时间：</span><span class="sport-data">5</span><span class="common">分钟</span>
-                <span class="step-next-title">消耗热量：</span><span class="sport-data">5</span><span class="common">千卡</span>
+        </div>
+
+        <div class="col-sm-9 col-md-10 release-mood">
+            <h3 class="grey-color">好友动态</h3>
+            <hr class="bar-hr">
+            <div class="friend-mood-bar">
+                <div class="float-left">
+                    <img src="../image/">
+
+                </div>
+
             </div>
-            <hr class="bar-hr">
-
-            <h3 class="grey-color">步频分析</h3>
-            <div id="day-line" class="sport-line"></div>
-            <hr class="bar-hr">
-
-            <h2 class="grey-color">本周已运动</h2>
-            <hr class="bar-hr">
-            <div id="week-line" class="sport-line"></div>
-            <hr class="bar-hr">
-
-            <h2 class="grey-color">总运动量</h2>
-            <hr class="bar-hr">
-            <div class="total-data text-center">
-                <span class="step-next-title">运动距离：</span><span class="sport-data">100</span><span class="common">公里</span>
-                <span class="step-next-title">运动时间：</span><span class="sport-data">500</span><span class="common">分钟</span>
-                <span class="step-next-title">消耗热量：</span><span class="sport-data">500</span><span class="common">千卡</span>
-                <span class="step-next-title">运动排名：</span><span class="sport-data">10</span><span class="common">名</span>
-            </div>
-            <hr class="bar-hr">
-
-            <h2 id="sort-part" class="grey-color">排行榜</h2>
-            <hr class="bar-hr">
-
-
         </div>
     </div>
 

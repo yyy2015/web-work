@@ -1,0 +1,43 @@
+/*发布动态*/
+.release-part {
+    position:relative;
+    margin-top:20px;
+}
+.release-textarea{
+    width:400px;
+    height:80px;
+    border-color: #5299C0;
+    color:rgb(150,150,150);
+}
+
+.release-textarea:focus{
+    border-color:#5299C0;
+    color:#000;
+    outline:none;
+}
+
+.release-part > .btn-release,.release-part > .btn-release:focus{
+    position: relative;
+    margin-bottom:20px;
+    width:70px;
+    height:30px;
+    background-color: #5299C0;
+    color:#fff;
+    font-size:12px;
+    border: none;
+    outline:none;
+}
+
+.release-part > .btn-release:hover{
+    background-color: rgba(75,122,147,.95);
+}
+
+/*end 发布动态*/
+
+/*好友动态*/
+.release-mood{
+    margin-top:5px;
+    box-shadow: 1px 1px 1px #888888;
+}
+
+/*end 好友动态*/
