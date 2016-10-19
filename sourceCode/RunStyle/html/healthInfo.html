@@ -65,13 +65,25 @@
             <hr class="bar-hr">
 
             <div class="text-center">
+                <span class="step-next-title">年龄</span><span class="sport-data">19</span><span class="common"></span>
                 <span class="step-next-title">身高:</span><span class="sport-data">160</span><span class="common">cm</span>
                 <span class="step-next-title">体重:</span><span class="sport-data">50</span><span class="common">kg</span>
                 <span class="step-next-title">平均血压:</span><span class="sport-data">80</span><span class="common">mmHg</span>
                 <span class="step-next-title">平均心率:</span><span class="sport-data">60</span><span class="common">BPM</span>
 
-                <button class="btn btn-default" data-toggle="modal" data-target="#editor">编辑</button>
+                <button class="btn btn-default btn-editor" data-toggle="modal" data-target="#editor">编辑</button>
             </div>
+
+            <div class="text-center">
+                <span class="health-title">BMI:</span><span class="BMI-data">19.5</span><span class="common"></span>
+                <span class="health-title">范围：</span><span class="health-data">正常</span><span class="common"></span>
+            </div>
+            <hr class="bar-hr">
+
+            <h3 class="grey-color">体重变化图</h3>
+            <div id="weight-bar" class="sport-line"></div>
+
+
 
             <!--编辑身高体重等参数的模态框-->
             <div class="modal fade" id="editor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -79,14 +91,38 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title" id="myModalLabel">编辑参数</h4>
+                            <h4 class="modal-title grey-color" id="myModalLabel">编辑参数</h4>
                         </div>
                         <div class="modal-body">
+                            <div >
+                                <span class="modal-param">年龄：</span>
+                                <input type="text" class="param-text">
+                                <span class="common">岁</span>
+                            </div>
+                            <br>
+                            <div >
+                                <span class="modal-param">身高：</span>
+                                <input type="text" class="param-text">
+                                <span class="common">cm</span>
+                                <span class="modal-param">体重：</span>
+                                <input type="text" class="param-text">
+                                <span class="common">kg</span>
+                            </div>
+                            <br>
+                            <div >
+                                <span class="modal-param">血压：</span>
+                                <input type="text" class="param-text">
+                                <span class="common">mmHg</span>
+                                <span class="modal-param">心率：</span>
+                                <input type="text" class="param-text">
+                                <span class="common">BPM</span>
+                            </div>
+
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                            <button type="button" class="btn btn-primary">提交更改</button>
+                            <button type="button" class="btn btn-default btn-cancel" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary btn-confirm" data-dismiss="modal">确定</button>
                         </div>
                     </div>
                 </div>
@@ -108,7 +144,7 @@
 <script src="../plugin/jquery/jquery-3.1.1.min.js"></script>
 <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
 <script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
-<script src="../js/sportAnalysis.js"></script>
+<script src="../js/healthInfo.js"></script>
 <script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
