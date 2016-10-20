@@ -65,4 +65,12 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
     box-shadow: 2px 2px 2px #888888;
 }
 
+.common{
+    padding-right:5%;
+}
+
+.my-padding-bottom{
+    padding-bottom:20px;
+}
+
 

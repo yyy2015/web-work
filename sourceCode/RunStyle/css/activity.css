@@ -1,0 +1,191 @@
+/*全部活动*/
+
+.activity-search-part{
+    margin-top:5%;
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+}
+
+.activity-name{
+    text-decoration: none;
+    color:rgb(220,180,103);
+    font-size:18px;
+    font-weight:600;
+}
+
+.activity-name:hover{
+    text-decoration: none;
+    /*color:rgb(222,108,108);*/
+    color:#5299C0;
+}
+
+.classify-tag-part{
+    margin-top:1%;
+}
+
+.classify-tag{
+    color:rgb(150,150,150);
+    font-size:13px;
+    padding-right:5px;
+}
+
+.release-part{
+    margin-top:1%
+}
+
+.activity-tag{
+    color:rgb(222,108,108);
+    font-size:13px;
+    padding-right:5px;
+}
+
+.activity-releaser{
+    text-decoration: none;
+    color:#5299C0;
+}
+.activity-releaser:hover{
+    text-decoration: none;
+    color:rgb(75,122,147);
+}
+
+.joined{
+    margin-top:1%;
+}
+
+
+/*end 全部活动*/
+
+/*活动详情*/
+
+.activity-basic-info{
+    margin-left:6%;
+}
+
+.detail-activity-name{
+    color:rgb(220,180,103);
+    font-size:25px;
+    font-weight:600;
+}
+
+.time-style{
+    color:rgb(150,150,150);
+    padding-left:1%;
+}
+
+.line-part{
+    margin-top:2%;
+}
+.line-part-special{
+    margin-top:1%;
+}
+
+.icon-style{
+    color:#5299C0;
+}
+
+.detail-title{
+    margin-left:8px;
+    margin-right:5px;
+    color:rgb(100,100,100);
+    font-size:18px;
+    font-weight:500;
+}
+
+.time-data{
+    color:rgb(237,185,103);
+    font-size:25px;
+    font-weight:600;
+    padding-right:5px;
+}
+
+.time-dis{
+    padding-right:3%;
+}
+
+.detail-releaser{
+    text-decoration: none;
+    color:rgb(237,185,103);
+    font-size:20px;
+    font-weight:500;
+    padding-right:5px;
+}
+
+.detail-releaser:hover{
+    text-decoration: none;
+    color:rgb(222,108,108);
+    font-size:20px;
+    font-weight:500;
+    padding-right:5px;
+}
+
+.join-require{
+    color:rgb(237,185,103);
+    font-size:16px;
+    font-weight:500;
+    padding-right:5px;
+}
+
+.joint-title{
+    display: inline-block;
+    padding-right:5%;
+}
+
+.detail-btn-join{
+    /*position: relative;*/
+    margin-top:15%;
+    border:none;
+    background-color: #5299C0;
+    color:white;
+    width:100px;
+    height:35px;
+}
+
+.detail-btn-join:hover{
+    border: none;
+    outline:none;
+    background-color: rgb(75,122,147);
+    color:white;
+}
+
+
+
+
+/*end 活动详情*/
+
+/*发布活动*/
+.release-text{
+    margin-left:5%;
+    width:200px;
+    height:30px;
+    border-left:#5299C0 1px solid;
+    border-top:#5299C0 1px solid;
+    border-right:#5299C0 1px solid;
+    border-bottom: #5299C0 1px solid;
+    outline:none;
+
+}
+
+.release-text:focus{
+    border-color: rgb(75,122,147);
+    outline:none;
+}
+
+
+
+.release-text-area-here{
+    margin-left:5%;
+    width:30%;
+    height:60px;
+    border-color:#5299C0;
+    outline:none;
+}
+
+.release-text-area-here:focus{
+    border-color:rgb(75,122,147);
+    outline:none;
+}
+
+
+
+/*end 发布活动*/

@@ -1,13 +1,14 @@
 /*发布动态*/
 .release-part {
-    margin-left:10%;
-    margin-right: 10%;
+    /*margin-left:10%;*/
+    /*margin-right: 10%;*/
     width: 80%;
-    margin-top:3%;
+    margin:auto;
 }
 .release-textarea{
-    width:400px;
+    width:80%;
     height:80px;
+    margin-top:4%;
     border-color: #5299C0;
     /*color:rgb(150,150,150);*/
 }
@@ -52,6 +53,7 @@
     width:80%;
     margin-left:10%;
     margin-right:10%;
+    margin-top:1.5%;
     padding-left:5%;
     padding-right:6%;
     box-shadow: 2px 2px 2px 2px #888888;
@@ -115,11 +117,11 @@
     border-color: #5299C0;
 }
 
-.btn-release,.btn-search{
+.btn-release,.btn-search,.btn-activity-search{
     background-color: #5299C0;
     color:#fff;
 }
-.btn-release:hover,.btn-release：focus,.btn-search:hover,.btn-search:focus{
+.btn-release:hover,.btn-release：focus,.btn-search:hover,.btn-search:focus,.btn-activity-search:hover,.btn-activity-search:focus{
     outline:none;
     background-color: rgb(75,122,147);
 }
@@ -176,18 +178,22 @@
 /*end 与我相关*/
 
 /*好友管理*/
-
-.search-part{
+.search-part,.activity-search-part{
     width:50%;
     margin-left:25%;
     margin-right:25%;
 }
 
-.one-friend{
+/*.friend-list-part{*/
+    /*display:block;*/
+/*}*/
+
+.one-friend,.one-activity{
     width:40%;
+    margin-top:1%;
     margin-left:5%;
     padding-left: 2%;
-    padding-top: 1%;
+    padding-top: 0.5%;
     padding-bottom:1%;
     box-shadow: 1px 1px 1px 1px #888888;
 }
@@ -201,9 +207,11 @@
     color:rgb(237,185,103);
 }
 
-.btn-add{
-    margin-top:-80px;
-    margin-right:30px;
+.btn-add-part,.btn-join-part{
+    padding-top:5%;
+    padding-right:8%;
+}
+.btn-add,.btn-join{
     border:none;
     background-color: #5299C0;
     color:white;
@@ -211,13 +219,33 @@
     height:35px;
 }
 
-.btn-add:hover{
+.btn-add:hover,.btn-join:hover{
     border: none;
     outline:none;
     background-color: rgb(75,122,147);
     color:white;
 }
 
+.page-jump{
+    margin-right:10%;
+    margin-top:2%;
+    margin-bottom:1%;
+}
 
+.btn-page,.btn-page:focus{
+    border:none;
+    background-color: rgb(220,180,103);
+    margin:auto;
+    color:white;
+    width:90px;
+    height:32px;
+}
+
+.btn-page:hover{
+    border:none;
+    background-color: rgb(222,108,108);
+;
+    color:white;
+}
 
 /*end 好友管理*/

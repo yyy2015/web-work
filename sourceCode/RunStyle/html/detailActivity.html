@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html"; charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="the sport page of RunStyle, to analysis sport and sleep data, to show friends' and personal information">
+    <meta name="author" content="yyy">
+    <title>RunStyle</title>
+    <!--css-->
+    <link href="../plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../plugin/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/navigation.css" rel="stylesheet">
+    <link href="../css/friend.css" rel="stylesheet">
+    <link href="../css/activity.css" rel="stylesheet">
+</head>
+<body>
+<!--fixed navbar-->
+<nav class="navbar navbar-inverse navbar-fixed-top my-nav" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand my-title" >RunStyle</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="sportAnalysis.html">运动</a></li>
+                <li><a href="friendMood.html">动态</a></li>
+                <li class="active"><a href="activity.html">活动</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html">登录</a></li>
+                <li><a href="regiter.html">注册</a></li>
+            </ul>
+        </div>
+    </div>
+
+</nav>
+
+<!--main content-->
+<div class="container sport-part">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar side-navigation float-left">
+            <div class="header-part">
+                <img src="../image/header.jpg">
+                <h5 class="white-color">找呀找呀找尾巴</h5>
+                <hr class="bar-hr">
+            </div>
+
+            <ul class="nav nav-sidebar">
+                <li><a href="activity.html" class="white-color">全部活动</a></li>
+                <li><a href="releaseActivity.html" class="white-color">发布活动</a></li>
+                <li><a href="myActivity.html" class="white-color">我的活动</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-md-10 main-content float-right my-padding-bottom">
+            <h3 class="grey-color">活动详情</h3>
+            <hr class="bar-hr">
+            <div class="activity-basic-info">
+                <div class="detail-title-part">
+                    <span class="detail-activity-name">栖霞行</span>
+                    <span class="start-time time-style">2016/10/24 00:00:00</span><span class="activity-tag time-style">~</span>
+                    <span class="end-time time-style">2016/10/27 00:00:00</span>
+                </div>
+                <div class="time-part line-part">
+                <i class="icon-bell-alt icon-2x icon-style"></i><span class="detail-title">距离活动开始还有：</span>
+                    <span class="day time-data">1</span><span class="time-dis">天</span>
+                    <span class="hour time-data">5</span><span class="time-dis">小时</span>
+                    <span class="minute time-data">29</span><span class="time-dis">分</span>
+                </div>
+                <div class="detail-releaser-part line-part">
+                    <i class="icon-user icon-2x icon-style"></i>
+                    <span class="detail-title">发起人：</span><a class="detail-releaser" href="personalPage.html">小易</a>
+                </div>
+                <div class="detail-gift-part line-part">
+                    <i class="icon-gift icon-2x icon-style"></i>
+                    <span class="detail-title">勋章值：</span><span class="time-data honor-mark" title="勋章值可助您升级以获得更大权限">10</span>
+                </div>
+                <div class="detail-join-num line-part-special">
+                    <i class="icon-hand-up icon-2x icon-style"></i>
+                    <span class="detail-title">人数上限：</span><span class="time-data join-num" >10</span>
+                </div>
+                <div class="detail-join-require line-part">
+                    <i class="icon-hand-right icon-2x icon-style"></i>
+                    <span class="detail-title">参加要求：</span><span class="join-require">热爱生活，品德良好</span>
+                </div>
+
+            </div>
+            <hr class="bar-hr">
+
+            <div class="clearfix"></div>
+            <div class="detail-joint-part">
+                <h3 class="grey-color joint-title">已参加人员</h3>
+                <span class="time-data joint-user">6</span>
+                <div class="float-right">
+                    <a type="button" class="btn btn-default detail-btn-join">我要报名</a>
+                </div>
+                <hr class="bar-hr">
+
+                <div class="friend-list-part my-margin-bottom">
+                    <div class="one-friend float-left">
+                        <div class="float-left">
+                            <a href="personalPage.html"><img src="../image/user-header.JPG" class="img-circle user-header-related"></a>
+                            <a class="color-grey user-name-related" href="personalPage.html">小易</a>
+                            <div class="honor-part">
+                                <span class="honor-title">勋章值：</span>
+                                <div class="honor-data">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="float-right btn-add-part">
+                            <a type="button" class="btn btn-default btn-add">关注&nbsp<i class="icon-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <!--repeat-->
+                    <div class="one-friend float-left">
+                        <div class="float-left">
+                            <a href="personalPage.html"><img src="../image/user-header.JPG" class="img-circle user-header-related"></a>
+                            <a class="color-grey user-name-related" href="personalPage.html">小易</a>
+                            <div class="honor-part">
+                                <span class="honor-title">勋章值：</span>
+                                <div class="honor-data">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="float-right btn-add-part">
+                            <a type="button" class="btn btn-default btn-add">关注&nbsp<i class="icon-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="one-friend float-left">
+                        <div class="float-left">
+                            <a href="personalPage.html"><img src="../image/user-header.JPG" class="img-circle user-header-related"></a>
+                            <a class="color-grey user-name-related" href="personalPage.html">小易</a>
+                            <div class="honor-part">
+                                <span class="honor-title">勋章值：</span>
+                                <div class="honor-data">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="float-right btn-add-part">
+                            <a type="button" class="btn btn-default btn-add">关注&nbsp<i class="icon-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="one-friend float-left">
+                        <div class="float-left">
+                            <a href="personalPage.html"><img src="../image/user-header.JPG" class="img-circle user-header-related"></a>
+                            <a class="color-grey user-name-related" href="personalPage.html">小易</a>
+                            <div class="honor-part">
+                                <span class="honor-title">勋章值：</span>
+                                <div class="honor-data">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="float-right btn-add-part">
+                            <a type="button" class="btn btn-default btn-add">关注&nbsp<i class="icon-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="one-friend float-left">
+                        <div class="float-left">
+                            <a href="personalPage.html"><img src="../image/user-header.JPG" class="img-circle user-header-related"></a>
+                            <a class="color-grey user-name-related" href="personalPage.html">小易</a>
+                            <div class="honor-part">
+                                <span class="honor-title">勋章值：</span>
+                                <div class="honor-data">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="float-right btn-add-part">
+                            <a type="button" class="btn btn-default btn-add">关注&nbsp<i class="icon-plus"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="one-friend float-left">
+                        <div class="float-left">
+                            <a href="personalPage.html"><img src="../image/user-header.JPG" class="img-circle user-header-related"></a>
+                            <a class="color-grey user-name-related" href="personalPage.html">小易</a>
+                            <div class="honor-part">
+                                <span class="honor-title">勋章值：</span>
+                                <div class="honor-data">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="float-right btn-add-part">
+                            <a type="button" class="btn btn-default btn-add">关注&nbsp<i class="icon-plus"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+<!--js-->
+<script src="../plugin/jquery/jquery-3.1.1.min.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+<script src="../js/sportAnalysis.js"></script>
+<script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
