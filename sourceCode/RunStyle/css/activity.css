@@ -186,6 +186,27 @@
     outline:none;
 }
 
+.btn-release-activity-style{
+    position:relative;
+    margin-right:100px;
+    border:none;
+    background-color: #5299C0;
+    color:white;
+    width:100px;
+    height:35px;
+
+}
+
+.btn-release-activity-style:hover{
+    position:relative;
+    margin-right:100px;
+    border:none;
+    background-color: rgb(75,122,147);
+    color:white;
+
+}
+
+
 
 
 /*end 发布活动*/
