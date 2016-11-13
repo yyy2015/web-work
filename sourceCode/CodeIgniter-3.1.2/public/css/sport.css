@@ -1,0 +1,129 @@
+
+/*运动分析模块*/
+
+.steps{
+    color:#5299C0;
+    font-size:40px;
+    font-weight: 700;
+
+}
+
+.sort-title{
+    color:#485366;
+    font-size:18px;
+    font-weight:500;
+    padding-left:30px;
+}
+
+.sort-data, .sort-data:hover{
+    text-decoration: none;
+    color:rgb(237,185,103);
+    font-size: 40px;
+    font-weight:700;
+    padding-left: 20px;
+}
+
+.detail-data{
+    margin-top:15px;
+}
+
+.step-next-title{
+    color:#485366;
+    font-size:15px;
+    font-weight: 500;
+    /*padding-right: 10px;*/
+}
+
+.sport-data{
+    color:rgb(237,185,103);
+    font-size:20px;
+    font-weight:600;
+    padding-right:5px;
+}
+
+
+.sport-line{
+    min-width:310px;
+    height:400px;
+    margin:0 auto;
+}
+
+/*end 运动分析模块*/
+
+/*睡眠分析模块*/
+
+/*end 睡眠分析模块*/
+
+/*身体信息模块*/
+.text-center>.btn-editor,.text-center>.btn-editor:focus{
+    position: relative;
+    margin-bottom:5px;
+    width:70px;
+    height:30px;
+    background-color: #5299C0;
+    color:#fff;
+    font-size:12px;
+    border: none;
+    outline:none;
+}
+.text-center>.btn-editor:hover{
+    border:none;
+    background-color: rgba(75,122,147,.95);
+}
+
+.param-text{
+    width:150px;
+    border-left:#5299C0 1px solid;
+    border-top:#5299C0 1px solid;
+    border-right:#5299C0 1px solid;
+    border-bottom: #5299C0 1px solid;
+}
+
+.modal-footer>.btn-confirm,.modal-footer>.btn-confirm:focus{
+    position: relative;
+    margin-bottom:5px;
+    width:70px;
+    height:30px;
+    background-color: #5299C0;
+    color:#fff;
+    font-size:12px;
+    border: none;
+    outline: none;
+}
+.modal-footer>.btn-confirm:hover{
+    border:none;
+    background-color: rgba(75,122,147,.95);
+}
+.modal-footer>.btn-cancel,.modal-footer>.btn-cancel:focus{
+    position: relative;
+    width:70px;
+    height:30px;
+    background-color: rgb(150,150,150);
+    color:#fff;
+    font-size:12px;
+    border: none;
+    outline: none;
+}
+.modal-footer>.btn-cancel:hover{
+    border:none;
+    background-color: rgb(100,100,100);
+}
+
+.health-title{
+    color:#485366;
+    font-size: 20px;
+    font-weight:500;
+    padding-right:10px;
+}
+.BMI-data{
+    color:#5299C0;
+    font-size:30px;
+    font-weight:600;
+}
+
+.health-data{
+    color:rgb(237,185,103);
+    font-size:25px;
+    font-weight:600;
+}
+/*end 身体信息模块*/

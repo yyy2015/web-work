@@ -1,0 +1,76 @@
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
+    font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
+
+
+.text-font{
+    color:#fff;
+    font-weight:300;
+}
+
+.first-part{
+    margin-top:150px;
+}
+
+.float-right{
+    float:right;
+}
+
+.float-left{
+    float:left;
+}
+
+.white-color{
+    color:#fff;
+}
+
+.blue-color{
+    color:#5299C0
+}
+
+.grey-color{
+    color:#485366;
+
+}
+
+.white-grey-color{
+    color:rgb(150,150,150);
+}
+
+.bar-hr{
+    color: rgba(200,200,200,.8);
+}
+
+/*侧边导航*/
+.sport-part{
+    margin-top:60px;
+
+}
+
+.side-navigation{
+    background-color: #5299C0;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.header-part{
+    margin-top:15px;
+    text-align: center;
+}
+
+.side-navigation > ul > li > a{
+
+}
+
+.main-content{
+    border: 1px ;
+    box-shadow: 2px 2px 2px #888888;
+}
+
+.common{
+    padding-right:5%;
+}
+
+.my-padding-bottom{
+    padding-bottom:20px;
+}
+
+
