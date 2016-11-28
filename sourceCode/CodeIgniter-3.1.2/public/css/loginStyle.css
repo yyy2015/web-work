@@ -14,7 +14,7 @@ strong {
 }
 
 a{
-    color: rgb(237,185,103);;
+    color: rgb(237,185,103);
     text-decoration: none;
 }
 a:hover, a:focus{
@@ -92,6 +92,10 @@ img { max-width: 100%; }
     text-align: right;
 }
 
+.fa-key{
+    background: #000;
+}
+
 .form-bottom {
     padding: 25px 25px 30px 25px;
     background: rgb(230,230,230);
@@ -117,6 +121,10 @@ img { max-width: 100%; }
 
 .signUp{
     color:#000;
+}
+
+.errorLog{
+    color:red;
 }
 
 

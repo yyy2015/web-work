@@ -44,7 +44,10 @@
                         </div>
                     </div>
                     <div class="form-bottom">
-                        <form role="form" action="" method="post" class="login-form">
+                        <div class = "errorLog">
+                            <?php echo $log ; ?>
+                        </div><br>
+                        <?php echo form_open('loginController/validate_credentials'); ?>
                             <div class="form-group">
                                 <label class="sr-only" for="form-username">Username</label>
                                 <input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
@@ -60,7 +63,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3 goSignUp">
-                    <h5 class="signUp">还没有账号?<a href="<?php echo site_url("LoginController/signUp"); ?>">去注册</a></h5>
+                    <h5 class="signUp">还没有账号?<a href="<?php echo base_url("LoginController/signUp"); ?>">去注册</a></h5>
                 </div>
             </div>
         </div>
@@ -69,15 +72,6 @@
 </div>
 
 
-<!-- Javascript -->
-<script src="assets/js/jquery-1.11.1.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.backstretch.min.js"></script>
-<script src="assets/js/scripts.js"></script>
-
-<!--[if lt IE 10]>
-<script src="assets/js/placeholder.js"></script>
-<![endif]-->
 
 </body>
 
