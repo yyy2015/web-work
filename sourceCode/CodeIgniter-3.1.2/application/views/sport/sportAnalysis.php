@@ -15,22 +15,18 @@
 </head>
 <body>
 <!--fixed navbar-->
-<?php $this->load->view('templates/navbar'); ?>
+<?php $this->load->view('templates/navbar',$user_info); ?>
 
 <!--main content-->
 <div class="container sport-part">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar side-navigation float-left">
-            <div class="header-part">
-                <img src=<?php echo base_url("public/image/header.jpg") ?> >
-                <h5 class="white-color">找呀找呀找尾巴</h5>
-                <hr class="bar-hr">
-            </div>
+            <?php $this->load->view('templates/side-navbar',$user_info) ?>
 
             <ul class="nav nav-sidebar">
-                <li><a href="sportAnalysis.html" class="white-color">运动分析</a></li>
-                <li><a href="sleepAnalysis.html" class="white-color">睡眠分析</a></li>
-                <li><a href="healthInfo.html" class="white-color">身体管理</a></li>
+                <li><a href=<?php echo base_url('sportController/index') ?> class="white-color">运动分析</a></li>
+                <li><a href=<?php echo base_url('sportController/sleep') ?> class="white-color">睡眠分析</a></li>
+                <li><a href=<?php echo base_url('sportController/health') ?> class="white-color">身体管理</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-md-10 main-content float-right">

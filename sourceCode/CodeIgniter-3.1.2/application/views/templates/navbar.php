@@ -12,15 +12,13 @@
 
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">首页</a></li>
-                <li><a href="sportAnalysis.html">运动</a></li>
-                <li><a href="friendMood.html">动态</a></li>
-                <li><a href="activity.html">活动</a></li>
+                <li><a class="active" href=<?php echo base_url('sportController'); ?>>运动</a></li>
+                <li><a href=<?php echo base_url('friendController');?>>动态</a></li>
+                <li><a href=<?php echo base_url('activityController');?> >活动</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo site_url("LoginController/login"); ?>">登录</a></li>
-                <li><a href="<?php echo site_url("LoginController/signUp"); ?>">注册</a></li>
+                <li><a href="<?php echo site_url("LoginController/logout"); ?>">注销</a></li>
             </ul>
         </div>
 

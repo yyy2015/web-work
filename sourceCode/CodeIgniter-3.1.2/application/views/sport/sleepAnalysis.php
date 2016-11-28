@@ -21,16 +21,12 @@
 <div class="container sport-part">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar side-navigation float-left">
-            <div class="header-part">
-                <img src=<?php echo base_url("public/image/header.jpg")?> >
-                <h5 class="white-color">找呀找呀找尾巴</h5>
-                <hr class="bar-hr">
-            </div>
+            <?php $this->load->view('templates/side-navbar',$user_info) ?>
 
             <ul class="nav nav-sidebar">
                 <li><a href=<?php echo base_url("sportController/index");?> class="white-color">运动分析</a></li>
-                <li><a href=<?php echo base_url("sleepController/index");?> class="white-color">睡眠分析</a></li>
-                <li><a href=<?php echo base_url("healthController/index")?> class="white-color">身体管理</a></li>
+                <li><a href=<?php echo base_url("sportController/sleep");?> class="white-color">睡眠分析</a></li>
+                <li><a href=<?php echo base_url("sportController/health")?> class="white-color">身体管理</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-md-10 main-content float-right">
@@ -78,12 +74,11 @@
 
 
 <!--js-->
-<script src="../plugin/jquery/jquery-3.1.1.min.js"></script>
+<?php $this->load->view('templates/plugin'); ?>
 <!--<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>-->
 <!--<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>-->
-<script src="../plugin/highchart/highcharts.js"></script>
-<script src="../plugin/highchart/exporting.js"></script>
-<script src="../js/sportAnalysis.js"></script>
-<script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+<script src=<?php echo base_url("public/plugin/highchart/highcharts.js");?>></script>
+<script src=<?php echo base_url("public/plugin/highchart/exporting.js");?>></script>
+<script src=<?php echo base_url("public/js/sportAnalysis.js");?>></script>
 </body>
 </html>
