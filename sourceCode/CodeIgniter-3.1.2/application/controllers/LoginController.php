@@ -43,7 +43,7 @@ class LoginController extends CI_Controller {
                     'username' => $this->input->post('form-username'),
                     'is_logged_in' => true);
                 $this->session->set_userdata($data);
-                $this->load->view('sportController');
+                redirect('sportController');
             }else{
                 $this->signUp();
             }
@@ -63,9 +63,13 @@ class LoginController extends CI_Controller {
                 'username' => $this->input->post('form-username'),
                 'is_logged_in' => true
             );
+            if($data['username'] == 'administrator'){
+                redirect('userController');
+            }else{
+                $this->session->set_userdata($data);
+                redirect('sportController');
+            }
 
-            $this->session->set_userdata($data);
-            redirect('sportController');
         }else{
             $this->login($log='用户名或密码错误');
         }
@@ -74,6 +78,12 @@ class LoginController extends CI_Controller {
     function logout(){
         $this->session->sess_destroy();
         redirect('loginController');
+    }
+
+    function get_username(){
+//        $username = $this->session->userdata('username');
+        $username = 'yyy';
+        echo $username;
     }
 
 

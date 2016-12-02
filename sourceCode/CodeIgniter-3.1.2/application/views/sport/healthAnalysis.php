@@ -25,8 +25,8 @@
 
             <ul class="nav nav-sidebar">
                 <li><a href=<?php echo base_url("sportController/index");?> class="white-color">运动分析</a></li>
-                <li><a href=<?php echo base_url("sportController/sleep");?> class="white-color">睡眠分析</a></li>
-                <li><a href=<?php echo base_url("sportController/health")?> class="white-color">身体管理</a></li>
+                <li><a href=<?php echo base_url("sleepController");?> class="white-color">睡眠分析</a></li>
+                <li><a href=<?php echo base_url("healthController")?> class="white-color">身体管理</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-md-10 main-content float-right">
@@ -34,18 +34,18 @@
             <hr class="bar-hr">
 
             <div class="text-center">
-                <span class="step-next-title">年龄</span><span class="sport-data">19</span><span class="common"></span>
-                <span class="step-next-title">身高:</span><span class="sport-data">160</span><span class="common">cm</span>
-                <span class="step-next-title">体重:</span><span class="sport-data">50</span><span class="common">kg</span>
-                <span class="step-next-title">平均血压:</span><span class="sport-data">80</span><span class="common">mmHg</span>
-                <span class="step-next-title">平均心率:</span><span class="sport-data">60</span><span class="common">BPM</span>
+                <span class="step-next-title">年龄</span><span class="sport-data"><?php echo $health_info['age'] ?></span><span class="common"></span>
+                <span class="step-next-title">身高:</span><span class="sport-data"><?php echo $health_info['height'] ?></span><span class="common">m</span>
+                <span class="step-next-title">体重:</span><span class="sport-data"><?php echo $health_info['weight'] ?></span><span class="common">kg</span>
+                <span class="step-next-title">平均血压:</span><span class="sport-data"><?php echo $health_info['blood_pressure'] ?></span><span class="common">mmHg</span>
+                <span class="step-next-title">平均心率:</span><span class="sport-data"><?php echo $health_info['heartbeat'] ?></span><span class="common">BPM</span>
 
-                <button class="btn btn-default btn-editor" data-toggle="modal" data-target="#editor">编辑</button>
+<!--                <button class="btn btn-default btn-editor" data-toggle="modal" data-target="#editor">编辑</button>-->
             </div>
 
             <div class="text-center">
-                <span class="health-title">BMI:</span><span class="BMI-data">19.5</span><span class="common"></span>
-                <span class="health-title">范围：</span><span class="health-data">正常</span><span class="common"></span>
+                <span class="health-title">BMI:</span><span class="BMI-data"><?php echo $health_info['bmi'] ?></span><span class="common"></span>
+                <span class="health-title">范围：</span><span class="health-data"><?php echo $health_info['range'] ?></span><span class="common"></span>
             </div>
             <hr class="bar-hr">
 
@@ -116,6 +116,6 @@
 <script src=<?php echo base_url("public/plugin/highchart/exporting.js");?>></script>
 <!--<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>-->
 <!--<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>-->
-<script src=<?php echo base_url("public/js/healthInfo.js");?>></script>
+<script src=<?php echo base_url("public/js/healthInfo.js");?> ></script>
 </body>
 </html>

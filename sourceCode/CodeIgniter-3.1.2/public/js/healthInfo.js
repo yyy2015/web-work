@@ -1,59 +1,99 @@
-/**
- * Created by yyy on 2016/10/19.
- */
-$(function () {
-    $('#weight-bar').highcharts({
+$(document).ready(function () {
 
-        chart: {
-            type: 'column'
+    $.post({
+        url:"/loginController/get_username",
+        error:function(){
+            alert("something wrong!");
         },
+        success:function(username){
+            console.log(username);
+            $.post({
+                url: "/healthController/get_weight_height_change",
+                data: {username: username},
+                error: function () {
+                    alert("error!");
+                },
+                success: function (result, status) {
+                    var obj = JSON.parse(result);
+                    console.log(result);
+                    Highcharts.chart('weight-bar', {
+                        chart: {
+                            zoomType: 'xy'
+                        },
+                        title: {
+                            text: '近6个月身高体重变化图'
+                        },
+                        subtitle: {
+                            text: 'Source: WorldClimate.com'
+                        },
+                        xAxis: [{
+                            categories: obj.date,
+                            crosshair: true
+                        }],
+                        yAxis: [{ // Primary yAxis
+                            labels: {
+                                format: '{value}kg',
+                                style: {
+                                    color: Highcharts.getOptions().colors[1]
+                                }
+                            },
+                            title: {
+                                text: 'Weight',
+                                style: {
+                                    color: Highcharts.getOptions().colors[1]
+                                }
+                            }
+                        }, { // Secondary yAxis
+                            title: {
+                                text: 'Height',
+                                style: {
+                                    color: Highcharts.getOptions().colors[0]
+                                }
+                            },
+                            labels: {
+                                format: '{value} cm',
+                                style: {
+                                    color: Highcharts.getOptions().colors[0]
+                                }
+                            },
+                            opposite: true
+                        }],
+                        tooltip: {
+                            shared: true
+                        },
+                        legend: {
+                            layout: 'vertical',
+                            align: 'left',
+                            x: 120,
+                            verticalAlign: 'top',
+                            y: 100,
+                            floating: true,
+                            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+                        },
+                        series: [{
+                            name: 'Height',
+                            type: 'column',
+                            yAxis: 1,
+                            data: obj.height,
+                            tooltip: {
+                                valueSuffix: ' cm'
+                            }
 
-        title: {
-            text: 'Total fruit consumtion, grouped by gender'
-        },
+                        }, {
+                            name: 'Weight',
+                            type: 'spline',
+                            data: obj.weight,
+                            tooltip: {
+                                valueSuffix: 'kg'
+                            }
+                        }]
+                    });
+                }
+            });
+        }
 
-        xAxis: {
-            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
-        },
+    })
 
-        yAxis: {
-            allowDecimals: false,
-            min: 0,
-            title: {
-                text: 'Number of fruits'
-            }
-        },
 
-        tooltip: {
-            formatter: function () {
-                return '<b>' + this.x + '</b><br/>' +
-                    this.series.name + ': ' + this.y + '<br/>' +
-                    'Total: ' + this.point.stackTotal;
-            }
-        },
 
-        plotOptions: {
-            column: {
-                stacking: 'normal'
-            }
-        },
-
-        series: [{
-            name: 'John',
-            data: [5, 3, 4, 7, 2],
-            stack: 'male'
-        }, {
-            name: 'Joe',
-            data: [3, 4, 4, 2, 5],
-            stack: 'male'
-        }, {
-            name: 'Jane',
-            data: [2, 5, 6, 2, 1],
-            stack: 'female'
-        }, {
-            name: 'Janet',
-            data: [3, 0, 4, 4, 3],
-            stack: 'female'
-        }]
-    });
 });

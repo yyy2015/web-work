@@ -7,59 +7,29 @@
     <meta name="author" content="yyy">
     <title>RunStyle</title>
     <!--css-->
-    <link href="../plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../plugin/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href=<?php echo base_url("public/plugin/bootstrap/css/bootstrap.min.css"); ?> rel="stylesheet">
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">-->
+    <link href=<?php echo base_url("public/plugin/Font-Awesome-3.2.1/css/font-awesome.min.css")?> rel="stylesheet">
     <!--<link href="../plugin/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">-->
-    <link href="../css/main.css" rel="stylesheet">
-    <link href="../css/navigation.css" rel="stylesheet">
-    <link href="../css/sport.css" rel="stylesheet">
-    <link href="../css/friend.css" rel="stylesheet">
+    <link href=<?php echo base_url("public/css/main.css"); ?> rel="stylesheet">
+    <link href=<?php echo base_url("public/css/navigation.css");?> rel="stylesheet">
+    <link href=<?php echo base_url("public/css/sport.css")?> rel="stylesheet" >
+    <link href=<?php echo base_url("public/css/friend.css")?> rel="stylesheet" >
 </head>
 <body>
 <!--fixed navbar-->
-<nav class="navbar navbar-inverse navbar-fixed-top my-nav" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand my-title" >RunStyle</a>
-        </div>
-
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="sportAnalysis.html">运动</a></li>
-                <li><a href="friendMood.html">动态</a></li>
-                <li><a href="activity.html">活动</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.html">登录</a></li>
-                <li><a href="regiter.html">注册</a></li>
-            </ul>
-        </div>
-    </div>
-
-</nav>
+<?php $this->load->view('templates/navbar',$user_info); ?>
 
 <!--main content-->
 <div class="container sport-part">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar side-navigation float-left">
-            <div class="header-part">
-                <img src="../image/header.jpg">
-                <h5 class="white-color">找呀找呀找尾巴</h5>
-                <hr class="bar-hr">
-            </div>
+            <?php $this->load->view('templates/side-navbar',$user_info) ?>
 
             <!--<ul class="nav nav-sidebar">-->
-                <!--<li><a href="sportAnalysis.html" class="white-color">运动分析</a></li>-->
-                <!--<li><a href="sleepAnalysis.html" class="white-color">睡眠分析</a></li>-->
-                <!--<li><a href="healthInfo.html" class="white-color">身体管理</a></li>-->
+            <!--<li><a href="sportAnalysis.html" class="white-color">运动分析</a></li>-->
+            <!--<li><a href="sleepAnalysis.html" class="white-color">睡眠分析</a></li>-->
+            <!--<li><a href="healthInfo.html" class="white-color">身体管理</a></li>-->
             <!--</ul>-->
         </div>
         <div class="col-sm-9 col-md-10 main-content float-right">
@@ -128,12 +98,6 @@
 
 
 <!--js-->
-<script src="../plugin/jquery/jquery-3.1.1.min.js"></script>
-<!--<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>-->
-<!--<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>-->
-<script src="../plugin/highchart/highcharts.js"></script>
-<script src="../plugin/highchart/exporting.js"></script>
-<script src="../js/sportAnalysis.js"></script>
-<script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+<?php $this->load->view('templates/plugin') ?>
 </body>
 </html>

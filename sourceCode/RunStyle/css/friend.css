@@ -198,6 +198,37 @@
     box-shadow: 1px 1px 1px 1px #888888;
 }
 
+/*新增*/
+.one-user{
+    width:80%;
+    margin-top:1%;
+    margin-left:5%;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom:1%;
+    box-shadow: 1px 1px 1px 1px #888888;
+}
+.rank-num{
+    font-weight:600;
+    font-size:20px;
+    color:rgb(222,108,108);
+}
+.user-header-rank{
+    width:45px;
+}
+.total-step{
+    color:#5299C0;
+    font-weight:500;
+    font-size:30px;
+}
+
+.step-part{
+    padding-right:10%;
+}
+
+
+/*end新增*/
+
 .honor-part{
     margin-top:5px;
 }

@@ -1,8 +1,11 @@
+/**
+ * Created by yyy on 2016/11/30.
+ */
 var dayPage = 0;
 var totalPage = 0;
-var DayUserList={
+var NightUserList={
     init:function(){
-        this.gridsFather = $("#day_sport_rank");
+        this.gridsFather = $("#night_sleep_rank");
         this.lastGrid = $(".one-user").eq(0);
         this.clear = $("<div class=\"clearfix\"> </div>");
     },
@@ -26,8 +29,11 @@ var DayUserList={
             user_name.text(user.username);
             user_name.attr('href','/userController/gotoHomepage/'+user.username);
 
-            var total_step = tempGrid.find(".distance").eq(0);
-            total_step.text(user.distance);
+            var night_hour = tempGrid.find(".night-hour").eq(0);
+            night_hour.text(user.night_hour);
+
+            var night_min = tempGrid.find(".night-minute").eq(0);
+            night_min.text(user.night_minute);
 
             _this.gridsFather.append(tempGrid);
 
@@ -37,8 +43,8 @@ var DayUserList={
 
 var TotalUserList={
     init:function(){
-        this.gridsFather = $("#total_sport_rank");
-        this.lastGrid = $(".one-user").eq(0);
+        this.gridsFather = $("#total_sleep_rank");
+        this.lastGrid = $(".one-user-total").eq(0);
         this.clear = $("<div class=\"clearfix\"> </div>");
     },
     updateData:function(userlist){//type为0，表示日运动排序；type为1，表示总运动排序
@@ -49,7 +55,7 @@ var TotalUserList={
             var tempGrid = _this.lastGrid.clone(true);
 
             var rank_num = tempGrid.find(".rank-num").eq(0);
-            rank_num.text(i+1+totalPage*10);
+            rank_num.text(i+1+dayPage*10);
 
             var personal_page = tempGrid.find(".personal-page").eq(0);
             personal_page.attr('href','/userController/gotoHomepage/'+user.username);
@@ -61,38 +67,43 @@ var TotalUserList={
             user_name.text(user.username);
             user_name.attr('href','/userController/gotoHomepage/'+user.username);
 
-            var total_step = tempGrid.find(".distance").eq(0);
-            total_step.text(user.distance);
+            var total_day = tempGrid.find(".total-day").eq(0);
+            total_day.text(user.total_day);
+
+            var total_hour = tempGrid.find(".total-hour").eq(0);
+            total_hour.text(user.total_hour);
 
             _this.gridsFather.append(tempGrid);
 
         })
     }
 }
+
 $(document).ready(function () {
     //周运动折现图
     $.post({
-        url:"/loginController/get_username",
-        error:function(){
+        url: "/loginController/get_username",
+        error: function () {
             alert("something wrong!");
         },
-        success:function(username){
+        success: function (username) {
             console.log(username);
             $.post({
-                url: "/sportController/get_week_data",
+                url: "/sleepController/get_week_data",
                 data: {username: username},
                 error: function () {
                     alert("error!");
                 },
                 success: function (result, status) {
                     var obj = JSON.parse(result);
-                    $('#week-line').highcharts({
+                    console.log(result);
+                    $('#week-night-line').highcharts({
                         chart: {
                             type: 'area',
                             spacingBottom: 30
                         },
                         title: {
-                            text: '最近一周运动步数统计'
+                            text: '最近一周睡眠时间统计'
                         },
                         subtitle: {
                             text: 'runstyle statistic data',
@@ -113,11 +124,11 @@ $(document).ready(function () {
                         },
                         xAxis: {
 //                            categories: ['2011-11-11', 'Pears', 'Oranges', 'Bananas', 'Grapes', 'Plums', 'Strawberries', 'Raspberries']
-                            categories:obj.date
+                            categories: obj.date
                         },
                         yAxis: {
                             title: {
-                                text: '日运动步数'
+                                text: '睡眠时间/h'
                             },
                             labels: {
                                 formatter: function () {
@@ -128,21 +139,23 @@ $(document).ready(function () {
                         tooltip: {
                             formatter: function () {
                                 return '<b>' + this.series.name + '</b><br/>' +
-                                    this.x + ': ' + this.y;
-                            },
-                            valueSuffix: ' steps'
+                                    this.x + ': ' + this.y+'h';
+                            }
                         },
                         plotOptions: {
                             area: {
-                                fillOpacity: 0.5
+                                fillOpacity: 0.4
                             }
                         },
                         credits: {
                             enabled: false
                         },
                         series: [{
-                            name: 'day_step',
-                            data:obj.step
+                            name: 'loose_sleep_time',
+                            data: obj.loose
+                        },{
+                            name:'deep_sleep_time',
+                            data: obj.deep
                         }]
 
                     });
@@ -152,45 +165,48 @@ $(document).ready(function () {
 
     })
 
-    //日运动排名
-    DayUserList.init();
+    //当夜睡眠排行
+    NightUserList.init();
     $.post({
-        url:"/sportController/get_day_ranking",
+        url:"/sleepController/get_night_ranking",
         data:{page:1},
         success:function(userlist){
             dayPage = 0;
             var list_obj = JSON.parse(userlist);
-            DayUserList.updateData(list_obj);
+            NightUserList.updateData(list_obj);
             setDayButton(1);
         },
         error:function(){
-            alert("day_ranking_error!");
+            alert("night_ranking_error!");
         }
     })
 
-    //总运动排名
+    //总睡眠排行
     TotalUserList.init();
     $.post({
-        url:"/sportController/get_total_ranking",
+        url:"/sleepController/get_total_ranking",
         data:{page:1},
         success:function(userlist){
+            console.log("userlist:"+userlist);
             totalPage = 0;
             var list_obj = JSON.parse(userlist);
             TotalUserList.updateData(list_obj);
             setTotalButton(1);
+        },
+        error:function(){
+            alert("total_ranking_error!");
         }
     })
-
-});
+})
 
 function setDayData(page_num){//page 为要跳转到的页码
     $.post({
-        url:'/sportController/get_day_ranking',
+        url:'/sleepController/get_night_ranking',
         data:{page:page_num},
         success:function(datalist){
             dayPage = page_num-1;
             var list_obj = JSON.parse(datalist);
-            DayUserList.updateData(list_obj);
+            NightUserList.updateData(list_obj);
             setDayButton(page_num);
         },
         error:function(){
@@ -218,7 +234,7 @@ function setDayButton(currentPage){
 
 function setTotalData(page_num){//page 为要跳转到的页码
     $.post({
-        url:'/sportController/get_total_ranking',
+        url:'/sleepController/get_total_ranking',
         data:{page:page_num},
         success:function(datalist){
             totalPage = page_num-1;
